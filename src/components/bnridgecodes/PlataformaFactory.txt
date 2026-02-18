@@ -1,0 +1,20 @@
+const PlataformaWeb = require("../implementations/PlataformaWeb");
+const PlataformaMovil = require("../implementations/PlataformaMovil");
+const PlataformaEscritorio = require("../implementations/PlataformaEscritorio");
+
+class PlataformaFactory {
+  static crear(plataforma) {
+    switch (plataforma.toLowerCase()) {
+      case "web":
+        return new PlataformaWeb();
+      case "movil":
+        return new PlataformaMovil();
+      case "escritorio":
+        return new PlataformaEscritorio();
+      default:
+        throw new Error("Plataforma no soportada");
+    }
+  }
+}
+
+module.exports = PlataformaFactory;
