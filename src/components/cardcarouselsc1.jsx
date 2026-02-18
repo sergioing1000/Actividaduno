@@ -296,7 +296,7 @@ const Card6 = () => {
     setResponseData(null);
 
     try {
-      const response = await fetch("http://localhost:3000/automoviles", {
+      const response = await fetch("https://actividaduno-be.vercel.app", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
