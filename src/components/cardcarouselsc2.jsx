@@ -70,7 +70,7 @@ const Card1 = () => (
 );
 const Card2 = () => (
   <div className="card-content">
-    <h3>Patrón escogido</h3>
+    <h3>Patrón escogido - Escenario 2</h3>
 
     <div>
       <h4>Patrón Estructural - BRIDGE</h4>

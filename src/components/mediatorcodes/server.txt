@@ -1,0 +1,19 @@
+const express = require("express");
+const ChatRoomMediator = require("./domain/ChatRoomMediator");
+const User = require("./domain/User");
+const ChatService = require("./application/ChatService");
+const createChatRouter = require("./infrastructure/ChatController");
+
+const app = express();
+app.use(express.json());
+
+// Dependency Injection
+const mediator = new ChatRoomMediator();
+const chatService = new ChatService(mediator, User);
+
+app.use("/api/chat", createChatRouter(chatService));
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

@@ -17,7 +17,11 @@ const Sce2 = () => {
 }
 
 const Sce3 = () => {
-  return <div>Contenido del Escenario 3</div>;
+    return (
+      <div>
+        <CardCarouse3 />
+      </div>
+    );
 };
 
 const strategies = {
