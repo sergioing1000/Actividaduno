@@ -296,13 +296,16 @@ const Card6 = () => {
     setResponseData(null);
 
     try {
-      const response = await fetch("https://actividaduno-be.vercel.app", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://actividaduno-be.vercel.app/automoviles",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       let data;
 

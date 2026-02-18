@@ -376,7 +376,7 @@ const Card6 = () => {
       // Convertimos el texto a objeto JSON
       const parsedJson = JSON.parse(jsonInput);
 
-      const response = await fetch("http://localhost:3000/api/notificaciones", {
+      const response = await fetch("https://actividaduno-be.vercel.app/api/notificaciones", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
